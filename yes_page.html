@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ура! 💕💕💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffeef8 0%, #ffc3e1 50%, #ff9dc6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px 40px;
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3);
+            animation: celebrationPop 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes celebrationPop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            60% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .gif-container {
+            margin-bottom: 30px;
+        }
+
+        .gif-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ff1b8d;
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .message {
+            color: #333;
+            font-size: 1.5em;
+            line-height: 1.6;
+            margin: 30px 0;
+        }
+
+        .hearts-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .falling-heart {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .falling-heart:nth-child(1) { left: 10%; animation-duration: 3s; animation-delay: 0s; }
+        .falling-heart:nth-child(2) { left: 20%; animation-duration: 4s; animation-delay: 0.5s; }
+        .falling-heart:nth-child(3) { left: 30%; animation-duration: 3.5s; animation-delay: 1s; }
+        .falling-heart:nth-child(4) { left: 40%; animation-duration: 4.5s; animation-delay: 0.3s; }
+        .falling-heart:nth-child(5) { left: 50%; animation-duration: 3.2s; animation-delay: 0.8s; }
+        .falling-heart:nth-child(6) { left: 60%; animation-duration: 4.2s; animation-delay: 0.2s; }
+        .falling-heart:nth-child(7) { left: 70%; animation-duration: 3.8s; animation-delay: 0.6s; }
+        .falling-heart:nth-child(8) { left: 80%; animation-duration: 3.3s; animation-delay: 0.9s; }
+        .falling-heart:nth-child(9) { left: 90%; animation-duration: 4.1s; animation-delay: 0.4s; }
+
+        .emoji-big {
+            font-size: 4em;
+            margin: 20px 0;
+            animation: spin 2s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0%, 100% {
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                transform: rotate(10deg) scale(1.1);
+            }
+            75% {
+                transform: rotate(-10deg) scale(1.1);
+            }
+        }
+
+        .date {
+            color: #ff1b8d;
+            font-size: 1.3em;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .message {
+                font-size: 1.2em;
+            }
+            
+            .emoji-big {
+                font-size: 3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-rain">
+        <div class="falling-heart">❤️</div>
+        <div class="falling-heart">💕</div>
+        <div class="falling-heart">💖</div>
+        <div class="falling-heart">💗</div>
+        <div class="falling-heart">💝</div>
+        <div class="falling-heart">❤️</div>
+        <div class="falling-heart">💕</div>
+        <div class="falling-heart">💖</div>
+        <div class="falling-heart">💗</div>
+    </div>
+
+    <div class="container">
+        <h1>УРА!!! 🎉</h1>
+        
+        <div class="gif-container">
+            <img src="success.gif" alt="Success GIF">
+        </div>
+
+        <div class="emoji-big">💕💝💕</div>
+
+        <div class="message">
+            Я знал, что ты скажешь "Да"!<br>
+            Ты сделал меня самым счастливым!<br>
+            С Днём Святого Валентина, моя любовь! 💖
+        </div>
+
+        <div class="date">14 февраля 2026 💕</div>
+    </div>
+
+    <script>
+        // Добавляем звуковой эффект (опционально)
+        // Создаем конфетти эффект
+        function createConfetti() {
+            const colors = ['#ff6b9d', '#ff1b8d', '#ffc3e1', '#ff9dc6', '#ffb3d9'];
+            const confettiCount = 50;
+
+            for (let i = 0; i < confettiCount; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.style.position = 'fixed';
+                    confetti.style.width = '10px';
+                    confetti.style.height = '10px';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.left = Math.random() * window.innerWidth + 'px';
+                    confetti.style.top = '-10px';
+                    confetti.style.opacity = '1';
+                    confetti.style.borderRadius = '50%';
+                    confetti.style.zIndex = '1000';
+                    confetti.style.pointerEvents = 'none';
+                    
+                    document.body.appendChild(confetti);
+
+                    const duration = Math.random() * 3 + 2;
+                    const horizontalMove = (Math.random() - 0.5) * 200;
+
+                    confetti.animate([
+                        { transform: 'translateY(0) translateX(0) rotate(0deg)', opacity: 1 },
+                        { transform: `translateY(${window.innerHeight}px) translateX(${horizontalMove}px) rotate(${Math.random() * 720}deg)`, opacity: 0 }
+                    ], {
+                        duration: duration * 1000,
+                        easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                    });
+
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, duration * 1000);
+                }, i * 30);
+            }
+        }
+
+        // Запускаем конфетти при загрузке страницы
+        window.addEventListener('load', () => {
+            createConfetti();
+            // Повторяем через 3 секунды
+            setTimeout(createConfetti, 3000);
+        });
+    </script>
+</body>
+</html>
